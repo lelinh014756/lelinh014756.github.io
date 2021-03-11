@@ -1,73 +1,122 @@
 * {
-    font-family: Arial;
+    /* 
+    Defines the main font used throughout the entire site.
+  */
+    font-family: Verdana, Arial, Sans-Serif;
 }
 
-header {
-    background-color: #BB0000;
-    width: 844px;
-    height: 86px;
+body {
+    /* 
+    Clears white space around the body and sets the background color to a dark grey.
+  */
+    margin: 0;
+    background-color: #111111;
+    background-image: url(image/anh1.jpg);
 }
 
 a {
-    color: #FFFFFF;
+    /*
+    Clears the underline on normal links, and gives them #FE601A (orange) as the text color.
+  */
+    color: #FE601A;
+    text-decoration: none;
 }
 
+    a:hover {
+        /*
+    Underlines links when the user hovers the mouse over them.
+  */
+        text-decoration: underline;
+    }
+
 h1 {
+    /*
+    Makes h1 elements smaller than their browser default.
+  */
     font-size: 20px;
-    padding: 0;
-    margin: 0 0 10px 0;
+}
+
+header {
+    /*
+    Sets the background of the header to the same color as the right-hand side of the 
+    header image. This way, the header can expand to the right.
+    The margin at the bottom creates some room between the header and the menu and the main content.
+  */
+    background-color: #000000;
+    background-image: url(image/logo-2.png);
+}
+
+    header a {
+        /*
+    The header a is nested in the header. It provides a link to the homepage,
+    and sets the header image background.
+  */
+        background-repeat: no-repeat;
+        width: 944px;
+        height: 138px;
+        display: block;
+    }
+
+nav {
+    /*
+    Floats the entire menu on the left of the content.
+  */
+    width: 1700px;
+    float: left;
+    padding: 10px;
+    padding-top: 0; /* Reset the top-padding. The first menu item (home) already adds some padding to its top to create room between the nav element and the first menu item */
+    background-color: #FF6600;
+    margin-right: 20px;
+    font-size: 0.8em;
+}
+
+.FirstLevelMenuItems {
+    padding-top: 10px;
+}
+
+section#MainContent {
+    /*
+    Defines the main content area. The text color is white (on the gray background set on the body).
+    The #MainContent section element has a minimum height of 370 pixels, but can grow if necessary.
+    The font-size is 80% of its parent element, which in this case comes down to 80% of the font
+    the user has specified as the default font in the browser.
+  */
+    color: white;
+    font-size: 0.8em;
+    width: 600px;
+    min-height: 370px;
+    padding: 10px;
+    float: left;
+}
+
+aside#Sidebar {
+    /*
+    The Sidebar is positioned absolutely at the right of the page.
+    It has the same font-size and color as #MainContent
+  */
+    font-size: 0.8em;
+    width: 124px;
+    color: White;
+    float: left;
+    padding-top: 10px;
+}
+
+footer {
+    /*
+    The footer is positioned below all other content.
+    At the top, it gets a border with a dashed style, while all other sides have no border.
+	  The line-height centers the text in the footer vertically.
+  */
+    text-align: center;
+    border-top: 2px dashed gray;
+    height: 1000px;
+    line-height: 37px;
+    clear: both;
+    color: White;
+    background-color: #333333;
 }
 
 .Introduction {
     font-style: italic;
-    color: #003399;
-}
-
-#PageWrapper {
-    width: 844px;
-    margin: auto;
-}
-
-nav {
-    background-color: #111111;
-    color: #FFFFFF;
-    width: 844px;
-}
-
-/*#region Main Content */
-section#MainContent {
-    width: 664px;
-    float: left;
-}
-
-    section#MainContent a {
-        color: #4cff00;
-        text-decoration: underline;
-    }
-
-        section#MainContent a:visited {
-            color: #FF0000;
-            text-decoration: underline;
-        }
-
-        section#MainContent a:hover {
-            color: #FFA500;
-            text-decoration: underline;
-        }
-/*#endregion*/
-
-
-aside {
-    background-color: #111111;
-    color: #FFFFFF;
-    width: 180px;
-    float: left;
-}
-
-footer {
-    background-color: #111111;
-    color: #FFFFFF;
-    width: 844px;
-    clear: both;
 }
 
