@@ -37,7 +37,7 @@ namespace WpfApp2
 
         public virtual void Talk()
         {
-            MessageBox.Show("Linh");
+            MessageBox.Show(Name);
         }
 
     }
